@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+@font-face {
+    font-family: gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 30% 50% 20%;
+    position: relative;
+}
+
+#left-to-left {
+    /* background-color: saddlebrown; */
+    padding: 40px;
+}
+
+.box {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    rotate: 45deg;
+}
+
+#left-to-right {
+    /* background-color: seagreen; */
+    padding: 40px;
+    text-align: right;
+}
+
+#left-to-right h4 {
+    display: none;
+}
+
+#left-to-right p:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Gilroy;
+    margin-bottom: 30px;
+}
+
+#left-center {
+    /* background-color: salmon; */
+    grid-column: 1/3;
+    font-size: 90px;
+    line-height: 5.6vw;
+    padding: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+#left-center p:nth-child(2n) {
+    text-align: center;
+}
+
+
+#left-bottom {
+    grid-column: 1/3;
+    /* background-color: slategray; */
+    padding: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+#right {
+    /* background-color: skyblue; */
+    grid-column: 3;
+    grid-row: 1/4;
+    padding: 40px 180px 40px 0px;
+    /* padding-right: 180px; */
+}
+
+#right video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.circle {
+    height: 80px;
+    width: 80px;
+    background-color: orangered;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+#right i{
+    position: absolute;
+    top: 5.6%;
+    right: 2.3%;
+    font-size: 20px;
+}
+
+ 
+
+
+@media screen and (max-width:700px) {
+    #main {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30px 40% 20%;
+        position: relative;
+    }
+
+    #left-to-left {
+        /* background-color: saddlebrown; */
+        padding: 20px;
+    }
+
+    .box {
+        height: 15px;
+        width: 15px;
+    }
+
+    #left-to-right {
+        /* background-color: seagreen; */
+        padding: 15px;
+    }
+
+    #left-to-right p {
+        font-size: 25px;
+        display: none;
+    }
+
+    #left-to-right h4 {
+        display: block;
+        font-size: 24px;
+    }
+
+    #left-center {
+        /* background-color: salmon; */
+        grid-column: 1/3;
+        grid-row: 2;
+        /* margin: 0px 60px; */
+        font-size: 13vw;
+        line-height: 8vh;
+        padding: 20px;
+        font-family: sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+    }
+
+    #left-center p:nth-child(2n) {
+        /* text-align: center; */
+        margin-left: 130px;
+    }
+
+
+    #left-bottom {
+        grid-column: 1/3;
+        /* background-color: slategray; */
+        padding: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+    }
+
+    #right {
+         
+        grid-column: 1/3;
+        grid-row: 4;
+        /* padding: 40px 180px 40px 0px; */
+        padding: 100px 0px 0px 10px;
+         
+    }
+
+    .circle {
+        height: 80px;
+        width: 80px;
+        background-color: orangered;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 30px;
+        position: absolute;
+        left: 50%;
+        top: 79%;
+        transform: translate(-50%, -50%);
+    }
+
+    #right i{
+         display: none;
+    }
+
+}
